@@ -22,3 +22,5 @@
 .idea/
 _ReSharper*/
 *.DotSettings.user
+/FilmReview.API/filmreview.db-shm
+/FilmReview.API/filmreview.db-wal
