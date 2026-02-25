@@ -1,0 +1,99 @@
+### Review 1
+POST https://localhost:7136/api/films/1/reviews
+Content-Type: application/json
+
+{
+  "displayName": "Sarah Johnson",
+  "note": "An absolutely thrilling cinematic experience. The visual effects were stunning and the performances were top-notch. Highly recommend to anyone who loves adventure movies.",
+  "ranking": 9
+}
+
+### Review 2
+POST https://localhost:7136/api/films/1/reviews
+Content-Type: application/json
+
+{
+  "displayName": null,
+  "note": "Good movie overall but the pacing felt a bit slow in the middle. The ending was worth the wait though, and the cast did an excellent job bringing the characters to life.",
+  "ranking": 7
+}
+
+### Review 3
+POST https://localhost:7136/api/films/1/reviews
+Content-Type: application/json
+
+{
+  "displayName": "Mike Rodriguez",
+  "note": "This film exceeded all my expectations. The plot was engaging from start to finish and I loved how they developed the relationship between the main characters. A must-watch.",
+  "ranking": 10
+}
+
+### Review 4
+POST https://localhost:7136/api/films/1/reviews
+Content-Type: application/json
+
+{
+  "displayName": "Emma Clarke",
+  "note": "Visually spectacular but the script could have used another pass. Some of the dialogue felt clunky. Still worth seeing on the big screen for the set pieces alone.",
+  "ranking": 6
+}
+
+### Review 5
+POST https://localhost:7136/api/films/1/reviews
+Content-Type: application/json
+
+{
+  "displayName": null,
+  "note": "I was sceptical going in but this completely won me over. Great pacing, believable characters, and a genuinely surprising third act. Will be watching again.",
+  "ranking": 9
+}
+
+### Review 6
+POST https://localhost:7136/api/films/1/reviews
+Content-Type: application/json
+
+{
+  "displayName": "James Whitfield",
+  "note": "Decent enough way to spend two hours but nothing particularly memorable. Felt like I had seen it all before. The lead performance saves it from being forgettable.",
+  "ranking": 6
+}
+
+### Review 7
+POST https://localhost:7136/api/films/1/reviews
+Content-Type: application/json
+
+{
+  "displayName": "Priya Nair",
+  "note": "One of the best films I have seen this year. The direction is confident, the score is excellent, and the story actually has something to say. Refreshingly smart blockbuster filmmaking.",
+  "ranking": 10
+}
+
+### Review 8
+POST https://localhost:7136/api/films/1/reviews
+Content-Type: application/json
+
+{
+  "displayName": null,
+  "note": "Started strong but lost me halfway through. Too many subplots that went nowhere. The core story is compelling but the film is about thirty minutes too long.",
+  "ranking": 5
+}
+
+### Review 9
+POST https://localhost:7136/api/films/1/reviews
+Content-Type: application/json
+
+{
+  "displayName": "Tom Baxter",
+  "note": "Genuinely surprised by how emotional this got. Came for the action and stayed for the characters. The final act hit harder than I expected. Really well done.",
+  "ranking": 8
+}
+
+### Review 10
+POST https://localhost:7136/api/films/1/reviews
+Content-Type: application/json
+
+{
+  "displayName": "Lucy Hargreaves",
+  "note": "Solid filmmaking all round. Nothing flashy but everything works. The kind of film that reminds you that a good story well told beats spectacle every time.",
+  "ranking": 8
+}

@@ -1,0 +1,7 @@
+@FilmReview.API_HostAddress = http://localhost:5202
+
+### Get film details
+GET {{FilmReview.API_HostAddress}}/api/films/1
+Accept: application/json
+
+###

@@ -1,0 +1,52 @@
+<Solution>
+  <Folder Name="/docs/">
+    <File Path="Documents/0001-why-rest.md" />
+    <File Path="Documents/0002-why-layered-architecture.md" />
+    <File Path="Documents/0003-error-handling-strategy.md" />
+    <File Path="Documents/0004-logging-and-observability.md" />
+    <File Path="Documents/0005-testing-approach.md" />
+    <File Path="Documents/0006-sqlite.md" />
+    <File Path="Documents/0007-azure-static-web-apps.md" />
+    <File Path="Documents/0008-react-spa.md" />
+    <File Path="Documents/0009-ai-review-summary.md" />
+    <File Path="Documents/0010-persisted-average-ranking-and-ai-summary.md" />
+    <File Path="Documents/api-spec.md" />
+    <File Path="Documents/erd-film-review-app.mermaid" />
+    <File Path="Documents/film-review-app-prd.md" />
+    <File Path="Documents/FilmReview-C4.pdf" />
+    <File Path="Documents/Wireframe.png" />
+    <File Path="test-data.http" />
+  </Folder>
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="FileReview.Core/FileReview.Core.csproj" />
+    <Project Path="FileReview.Data/FileReview.Data.csproj" />
+    <Project Path="FilmReview.API/FilmReview.API.csproj" />
+  </Folder>
+  <Folder Name="/test/">
+    <Project Path="FilmReview.Tests/FilmReview.Tests.csproj" />
+  </Folder>
+  <Project Path="FilmReview.Web/" Type="Website" DisplayName="FilmReview.Web">
+    <BuildType Project="Debug" />
+    <Properties Name="WebsiteProperties">
+      <Property Name="Debug.AspNetCompiler.Debug" Value="&quot;True&quot;" />
+      <Property Name="Debug.AspNetCompiler.FixedNames" Value="&quot;false&quot;" />
+      <Property Name="Debug.AspNetCompiler.ForceOverwrite" Value="&quot;true&quot;" />
+      <Property Name="Debug.AspNetCompiler.PhysicalPath" Value="&quot;FilmReview.Web\&quot;" />
+      <Property Name="Debug.AspNetCompiler.TargetPath" Value="&quot;PrecompiledWeb\localhost_59927\&quot;" />
+      <Property Name="Debug.AspNetCompiler.Updateable" Value="&quot;true&quot;" />
+      <Property Name="Debug.AspNetCompiler.VirtualPath" Value="&quot;/localhost_59927&quot;" />
+      <Property Name="Release.AspNetCompiler.Debug" Value="&quot;False&quot;" />
+      <Property Name="Release.AspNetCompiler.FixedNames" Value="&quot;false&quot;" />
+      <Property Name="Release.AspNetCompiler.ForceOverwrite" Value="&quot;true&quot;" />
+      <Property Name="Release.AspNetCompiler.PhysicalPath" Value="&quot;FilmReview.Web\&quot;" />
+      <Property Name="Release.AspNetCompiler.TargetPath" Value="&quot;PrecompiledWeb\localhost_59927\&quot;" />
+      <Property Name="Release.AspNetCompiler.Updateable" Value="&quot;true&quot;" />
+      <Property Name="Release.AspNetCompiler.VirtualPath" Value="&quot;/localhost_59927&quot;" />
+      <Property Name="TargetFrameworkMoniker" Value="&quot;.NETFramework,Version%3Dv4.0&quot;" />
+      <Property Name="VWDPort" Value="&quot;59927&quot;" />
+    </Properties>
+  </Project>
+</Solution>

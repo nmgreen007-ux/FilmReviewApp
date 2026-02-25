@@ -1,0 +1,24 @@
+# Visual Studio
+.vs/
+*.user
+
+# Build output
+**/bin/
+**/obj/
+
+# Database (FilmReview.API)
+**/*.db
+**/*.sqlite
+**/*.mdf
+**/*.ldf
+
+# Sensitive config
+**/appsettings.Development.json
+
+# Test results
+**/TestResults/
+
+# Rider / ReSharper
+.idea/
+_ReSharper*/
+*.DotSettings.user

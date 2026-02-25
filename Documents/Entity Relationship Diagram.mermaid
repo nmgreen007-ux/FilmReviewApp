@@ -1,0 +1,33 @@
+erDiagram
+    Film {
+        int FilmId PK
+        string Title
+        string PosterUrl
+        string PlotSummary
+        decimal AverageRanking
+        string AiSummary
+    }
+
+    Actor {
+        int ActorId PK
+        string Name
+    }
+
+    CastMember {
+        int CastMemberId PK
+        int FilmId FK
+        int ActorId FK
+    }
+
+    Review {
+        int ReviewId PK
+        int FilmId FK
+        string Note
+        int Ranking
+        string DisplayName
+        datetime SubmittedAt
+    }
+
+    Film ||--o{ CastMember : "features"
+    Actor ||--o{ CastMember : "appears in"
+    Film ||--o{ Review : "has"
