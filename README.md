@@ -14,6 +14,12 @@ This project was built to demonstrate clean architecture, considered technical d
 - Calculates and displays an average ranking across all submitted reviews
 - Generates an AI summary of review sentiment via Azure OpenAI (gpt-5-nano)
 
+## Screenshots
+
+![Film View](./Documents/Screenshots/film-view-react.png)
+
+![Swagger API](./Documents/Screenshots/swagger.png)
+
 ---
 
 ## Tech Stack
