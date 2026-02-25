@@ -1,6 +1,6 @@
-using FileReview.Data.Entities;
+using FilmReview.Data.Entities;
 
-namespace FileReview.Data.Repositories;
+namespace FilmReview.Data.Repositories;
 
 public interface IFilmRepository
 {

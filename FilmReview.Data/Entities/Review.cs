@@ -1,4 +1,4 @@
-namespace FileReview.Data.Entities;
+namespace FilmReview.Data.Entities;
 
 public class Review
 {

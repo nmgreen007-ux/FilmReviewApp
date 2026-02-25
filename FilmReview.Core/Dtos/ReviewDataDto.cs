@@ -1,4 +1,4 @@
-namespace FileReview.Core.Dtos;
+namespace FilmReview.Core.Dtos;
 
 /// <summary>
 /// Data transfer object for review information used in film statistics calculations

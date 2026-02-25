@@ -1,8 +1,8 @@
-using FileReview.Core.Dtos;
-using FileReview.Data.Repositories;
+using FilmReview.Core.Dtos;
+using FilmReview.Data.Repositories;
 using Microsoft.Extensions.Logging;
 
-namespace FileReview.Core.Services;
+namespace FilmReview.Core.Services;
 
 public class FilmService : IFilmService
 {

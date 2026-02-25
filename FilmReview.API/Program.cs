@@ -1,6 +1,6 @@
-using FileReview.Core.Services;
-using FileReview.Data;
-using FileReview.Data.Repositories;
+using FilmReview.Core.Services;
+using FilmReview.Data;
+using FilmReview.Data.Repositories;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json.Serialization;
 

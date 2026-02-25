@@ -1,5 +1,5 @@
-using FileReview.Data;
-using FileReview.Data.Entities;
+using FilmReview.Data;
+using FilmReview.Data.Entities;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;

@@ -1,4 +1,4 @@
-namespace FileReview.Core.Services;
+namespace FilmReview.Core.Services;
 
 /// <summary>
 /// Configuration options for Azure OpenAI AI summary generation

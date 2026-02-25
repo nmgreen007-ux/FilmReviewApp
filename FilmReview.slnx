@@ -21,8 +21,8 @@
     <File Path=".editorconfig" />
   </Folder>
   <Folder Name="/src/">
-    <Project Path="FileReview.Core/FileReview.Core.csproj" />
-    <Project Path="FileReview.Data/FileReview.Data.csproj" />
+    <Project Path="FilmReview.Core/FilmReview.Core.csproj" />
+    <Project Path="FilmReview.Data/FilmReview.Data.csproj" />
     <Project Path="FilmReview.API/FilmReview.API.csproj" />
   </Folder>
   <Folder Name="/test/">

@@ -1,7 +1,7 @@
-using FileReview.Core.Dtos;
-using FileReview.Core.Services;
-using FileReview.Data.Entities;
-using FileReview.Data.Repositories;
+using FilmReview.Core.Dtos;
+using FilmReview.Core.Services;
+using FilmReview.Data.Entities;
+using FilmReview.Data.Repositories;
 using Microsoft.Extensions.Logging;
 using Moq;
 

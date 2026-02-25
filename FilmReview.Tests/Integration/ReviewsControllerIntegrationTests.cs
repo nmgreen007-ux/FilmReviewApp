@@ -2,7 +2,7 @@ using System.Net;
 using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
-using FileReview.Core.Dtos;
+using FilmReview.Core.Dtos;
 using Xunit;
 
 namespace FilmReview.Tests.Integration;

@@ -1,4 +1,4 @@
-namespace FileReview.Core.Services;
+namespace FilmReview.Core.Services;
 
 /// <summary>
 /// Service for generating AI-powered summaries of films

@@ -3,7 +3,7 @@ using System.Text.Json;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace FileReview.Core.Services;
+namespace FilmReview.Core.Services;
 
 /// <summary>
 /// Service for generating AI-powered summaries using Azure OpenAI REST API

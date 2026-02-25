@@ -15,8 +15,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\FilmReview.Data\FilmReview.Data.csproj" />
-    <ProjectReference Include="..\FilmReview.Core\FilmReview.Core.csproj" />
+    <ProjectReference Include="..\FileReview.Data\FilmReview.Data.csproj" />
+    <ProjectReference Include="..\FileReview.Core\FilmReview.Core.csproj" />
   </ItemGroup>
 
 </Project>

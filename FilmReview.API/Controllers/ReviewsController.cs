@@ -1,5 +1,5 @@
-using FileReview.Core.Dtos;
-using FileReview.Core.Services;
+using FilmReview.Core.Dtos;
+using FilmReview.Core.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FilmReview.API.Controllers;

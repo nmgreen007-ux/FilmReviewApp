@@ -1,4 +1,4 @@
-namespace FileReview.Core.Dtos;
+namespace FilmReview.Core.Dtos;
 
 public class CreateReviewDto
 {

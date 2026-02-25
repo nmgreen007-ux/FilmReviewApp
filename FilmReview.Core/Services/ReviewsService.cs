@@ -1,8 +1,8 @@
-using FileReview.Core.Dtos;
-using FileReview.Data.Entities;
-using FileReview.Data.Repositories;
+using FilmReview.Core.Dtos;
+using FilmReview.Data.Entities;
+using FilmReview.Data.Repositories;
 
-namespace FileReview.Core.Services;
+namespace FilmReview.Core.Services;
 
 public class ReviewsService : IReviewsService
 {

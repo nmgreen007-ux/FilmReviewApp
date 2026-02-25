@@ -1,6 +1,6 @@
-using FileReview.Core.Dtos;
+using FilmReview.Core.Dtos;
 
-namespace FileReview.Core.Services;
+namespace FilmReview.Core.Services;
 
 public interface IFilmService
 {

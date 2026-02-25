@@ -2,7 +2,7 @@ using Xunit;
 using Moq;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Configuration;
-using FileReview.Core.Services;
+using FilmReview.Core.Services;
 
 namespace FilmReview.Tests.Services;
 

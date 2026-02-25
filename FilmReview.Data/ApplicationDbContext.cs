@@ -1,7 +1,7 @@
-using FileReview.Data.Entities;
+using FilmReview.Data.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace FileReview.Data;
+namespace FilmReview.Data;
 
 public class ApplicationDbContext : DbContext
 {
