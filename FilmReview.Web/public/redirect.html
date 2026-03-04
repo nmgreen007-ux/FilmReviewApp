@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Auth Redirect</title>
+  </head>
+  <body>
+    <script
+      type="text/javascript"
+      src="https://alcdn.msauth.net/browser/3.0.0/js/msal-browser.min.js"
+    ></script>
+    <script type="text/javascript">
+      const pca = new msal.PublicClientApplication({
+        auth: {
+          clientId: "c8c9c88f-eba2-4098-b20e-a6cb6477010e",
+        },
+      });
+      pca.initialize().then(() => {
+        pca.handleRedirectPromise();
+      });
+    </script>
+  </body>
+</html>

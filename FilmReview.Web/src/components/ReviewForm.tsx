@@ -1,6 +1,7 @@
 import { useState, type ComponentProps } from "react";
 import type { CreateReviewDto } from "../types/index";
 import { submitReview } from "../api/client";
+import { useIsAuthenticated, useMsal } from "@azure/msal-react";
 
 type FormSubmitHandler = NonNullable<ComponentProps<"form">["onSubmit"]>;
 
@@ -15,6 +16,16 @@ function ReviewForm({ filmId, onSubmitSuccess }: ReviewFormProps) {
   const [displayName, setDisplayName] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
+  // Handle login for unauthenticated users
+  const { instance, accounts } = useMsal();
+  const isAuthenticated = accounts.length > 0;
+
+  const handleLogin = async () => {
+    await instance.loginRedirect({
+      scopes: [import.meta.env.VITE_MSAL_SCOPE],
+    });
+  };
 
   // Handle form submission and as prevent form submittion, validate inputs, call API, and notify parent on success
   const handleSubmit: FormSubmitHandler = async (e) => {
@@ -34,13 +45,28 @@ function ReviewForm({ filmId, onSubmitSuccess }: ReviewFormProps) {
     setIsSubmitting(true);
 
     try {
+      // Acquire token silently, fall back to popup if needed
+      let accessToken: string;
+      try {
+        const tokenResponse = await instance.acquireTokenSilent({
+          scopes: [import.meta.env.VITE_MSAL_SCOPE],
+          account: instance.getActiveAccount()!,
+        });
+        accessToken = tokenResponse.accessToken;
+      } catch {
+        const tokenResponse = await instance.acquireTokenPopup({
+          scopes: [import.meta.env.VITE_MSAL_SCOPE],
+        });
+        accessToken = tokenResponse.accessToken;
+      }
+
       const reviewData: CreateReviewDto = {
         note: note.trim(),
         ranking: parseInt(String(ranking), 10),
         displayName: displayName.trim() || undefined,
       };
 
-      await submitReview(filmId, reviewData);
+      await submitReview(filmId, reviewData, accessToken);
 
       // Reset form
       setNote("");
@@ -100,13 +126,36 @@ function ReviewForm({ filmId, onSubmitSuccess }: ReviewFormProps) {
         </div>
         {error && <div className="alert alert-danger">{error}</div>}
 
-        <button
-          type="submit"
-          disabled={isSubmitting}
-          className="btn btn-primary"
-        >
-          {isSubmitting ? "Submitting..." : "Submit Review"}
-        </button>
+        {isAuthenticated ? (
+          <div style={{ display: "flex", justifyContent: "space-between" }}>
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className="btn btn-primary"
+            >
+              {isSubmitting ? "Submitting..." : "Submit Review"}
+            </button>
+            <button
+              type="button"
+              onClick={() =>
+                instance.logoutRedirect({
+                  postLogoutRedirectUri: import.meta.env.VITE_REDIRECT_URI,
+                })
+              }
+              className="btn btn-secondary"
+            >
+              Sign out
+            </button>
+          </div>
+        ) : (
+          <button
+            type="button"
+            onClick={handleLogin}
+            className="btn btn-primary"
+          >
+            Sign in to submit a review
+          </button>
+        )}
       </form>
     </div>
   );

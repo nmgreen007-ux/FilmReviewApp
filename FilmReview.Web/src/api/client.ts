@@ -30,11 +30,13 @@ export async function getReviews(
 export async function submitReview(
   filmId: number,
   review: CreateReviewDto,
+  accessToken: string,
 ): Promise<void> {
   const response = await fetch(`${API_BASE_URL}/films/${filmId}/reviews`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
+      "Authorization": `Bearer ${accessToken}`,
     },
     body: JSON.stringify(review),
   });
