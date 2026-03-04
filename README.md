@@ -14,12 +14,6 @@ This project was built to demonstrate clean architecture, considered technical d
 - Calculates and displays an average ranking across all submitted reviews
 - Generates an AI summary of review sentiment via Azure OpenAI (gpt-5-nano)
 
-## Screenshots
-
-![Film View](./Documents/Screenshots/film-view-react.png)
-
-![Swagger API](./Documents/Screenshots/swagger.png)
-
 ---
 
 ## Tech Stack
@@ -53,13 +47,21 @@ The dependency rule is strictly observed — Core has no outward dependencies. D
 
 ---
 
+## Product Requirements
+
+The full product requirements document defines scope, features, and what done looks like for this project.
+
+📄 [PRD — FilmReviewApp](./Documents/PRD_FilmReviewApp-prd.md)
+
+---
+
 ## Getting Started
 
 ### Prerequisites
 
 - .NET 10 SDK
 - Node.js (for the React frontend)
-- An Azure OpenAI deployment via Azure AI Foundry (see [AI Setup Guide](./AI_Setup_Guide.md))
+- An Azure OpenAI deployment via Azure AI Foundry (see [AI Setup Guide](./Documents/AI_Setup_Guide.md))
 
 ### Running the API
 
@@ -87,6 +89,12 @@ dotnet test
 ### Configuration
 
 Azure OpenAI credentials are required for the AI summary feature. See the [AI Setup Guide](./Documents/AI_Setup_Guide.md) for instructions on setting up Azure AI Foundry and configuring credentials via user secrets.
+
+---
+
+## Screenshots
+![Film View](./Documents/Screenshots/film-view-react.png)
+![Swagger API](./Documents/Screenshots/swagger.png)
 
 ---
 
