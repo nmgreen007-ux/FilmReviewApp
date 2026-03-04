@@ -1,5 +1,6 @@
 using FilmReview.Core.Dtos;
 using FilmReview.Core.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FilmReview.API.Controllers;
@@ -35,6 +36,7 @@ public class ReviewsController : ControllerBase
     /// Submit a new review for a film
     /// </summary>
     [HttpPost]
+    [Authorize]
     public async Task<IActionResult> SubmitReview(int filmId, [FromBody] CreateReviewDto createReviewDto)
     {
         if (!ModelState.IsValid)
