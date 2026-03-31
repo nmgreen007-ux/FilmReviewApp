@@ -27,6 +27,7 @@ This project was built to demonstrate clean architecture, considered technical d
 | Frontend Hosting | Azure Static Web Apps |
 | AI Integration | Azure OpenAI (gpt-5-nano) |
 | API Docs | Swagger / OpenAPI |
+| Authentication | Microsoft Entra External ID (B2C) + MSAL |
 | Tests | xUnit + WebApplicationFactory |
 
 ---
@@ -62,6 +63,7 @@ The full product requirements document defines scope, features, and what done lo
 - .NET 10 SDK
 - Node.js (for the React frontend)
 - An Azure OpenAI deployment via Azure AI Foundry (see [AI Setup Guide](./Documents/AI_Setup_Guide.md))
+- A Microsoft Entra External ID (B2C) tenant with a sign-up/sign-in user flow and two app registrations (API + SPA) — required for review submission authentication (see [ADR-0011](./Documents/ADR/0011-security.md))
 
 ### Running the API
 
@@ -173,3 +175,4 @@ Key decisions are documented as ADRs in the [`Documents/ADR`](./Documents/ADR) f
 | [ADR-0009](./Documents/ADR/0009-ai-review-summary.md) | AI review summary |
 | [ADR-0010](./Documents/ADR/0010-persisted-average-ranking-and-ai-summary.md) | Persisting average ranking and AI summary |
 | [ADR-0011](./Documents/ADR/0011-security.md) | Security and authentication |
+| [ADR-0012](./Documents/ADR/0012-cors.md) | CORS policy |

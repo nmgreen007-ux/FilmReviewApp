@@ -1,7 +1,7 @@
 # Film Review App — Product Requirements Document
 
-**Version:** 1.0  
-**Status:** In progress  
+**Version:** 2.0
+**Status:** In progress
 **Purpose:** Skills demonstration project
 
 ---
@@ -22,10 +22,20 @@ A single-page web application that displays details for a film and allows users 
 
 ## Out of Scope
 
-- User authentication and accounts
 - Multiple films
 - Admin or moderation tooling
 - Mobile-optimised design (though it should not break on mobile)
+
+---
+
+## Phase 2 Additions
+
+Phase 2 extended the application with authentication and CORS hardening:
+
+- Review submission (`POST /api/films/{filmId}/reviews`) requires authentication via Microsoft Entra External ID (B2C)
+- Read endpoints (`GET /films`, `GET /reviews`) remain open — no sign-in required to browse
+- The React SPA uses MSAL to handle login, logout, and bearer token acquisition
+- CORS is configured to allow requests from the frontend origin only, read from configuration (`AllowedOrigins`)
 
 ---
 

@@ -1,7 +1,7 @@
 # Film Review App — API Specification
 
-**Version:** 1.0  
-**Status:** Proposed  
+**Version:** 1.1
+**Status:** Current
 **Base URL:** `/api`
 
 ---
@@ -11,6 +11,20 @@
 This document defines the HTTP contract for the Film Review App API. It covers all endpoints the React SPA requires, including expected request shapes, response shapes, and error behaviour.
 
 Swagger/OpenAPI documentation is generated automatically from the running API and should be treated as the living contract post-implementation. This document exists to define intent before implementation begins.
+
+---
+
+## Authentication
+
+Read endpoints are public and require no credentials. The write endpoint requires a valid bearer token issued by Microsoft Entra External ID (B2C).
+
+| Endpoint | Auth Required |
+|---|---|
+| `GET /api/films/{filmId}` | No |
+| `GET /api/films/{filmId}/reviews` | No |
+| `POST /api/films/{filmId}/reviews` | Yes — `Authorization: Bearer <token>` |
+
+Tokens are obtained by the React SPA via MSAL using the `reviews.write` scope. The API validates tokens using `Microsoft.Identity.Web` middleware. Unauthenticated requests to the POST endpoint return `401 Unauthorized`.
 
 ---
 
@@ -124,6 +138,11 @@ Returns a paginated list of reviews for a film, ordered newest first.
 
 Submits a new review for a film. Triggers recalculation of the average ranking and AI summary.
 
+**Authentication:** Required. Include a valid bearer token in the `Authorization` header:
+```
+Authorization: Bearer <token>
+```
+
 **Path Parameters**
 
 | Parameter | Type | Required | Description |
@@ -157,6 +176,7 @@ No response body. The `Location` header points to `GET /api/films/{filmId}/revie
 | Status | Reason |
 |---|---|
 | `400 Bad Request` | Validation failure — ProblemDetails body with field-level errors |
+| `401 Unauthorized` | No bearer token provided, or the token is invalid or expired |
 | `404 Not Found` | No film exists with the given ID |
 
 ---
