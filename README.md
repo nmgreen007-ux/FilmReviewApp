@@ -176,3 +176,14 @@ Key decisions are documented as ADRs in the [`Documents/ADR`](./Documents/ADR) f
 | [ADR-0010](./Documents/ADR/0010-persisted-average-ranking-and-ai-summary.md) | Persisting average ranking and AI summary |
 | [ADR-0011](./Documents/ADR/0011-security.md) | Security and authentication |
 | [ADR-0012](./Documents/ADR/0012-cors.md) | CORS policy |
+
+---
+
+## Roadmap
+
+| Phase   | Focus                                                        |
+| ------- | ------------------------------------------------------------ |
+| Phase 1 | Core application — .NET API, React SPA, SQLite, Azure OpenAI |
+| Phase 2 | Authentication and CORS hardening                            |
+| Phase 3 | Multi-film support with search and browse                    |
+| Phase 4 | Infrastructure and public deployment                         |
